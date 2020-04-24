@@ -1,0 +1,23 @@
+<div class="container">
+    <br />
+    <div class="jumbotron">
+        <h2 class="centered">Numbers of Click: {{ numOfClicks }}</h2>
+        <hr />
+        <h2 class="centered"><strong>{{choosenTime}} Seconds Left...</strong></h2>
+    </div>
+    <div class="centered">
+        <button (click)="incrementHandler()" class="game-btn">
+            <span class="game-btn__text">{{ textBtn }}</span>
+        </button>
+    </div>
+    <br />
+    <div *ngIf="incrementHandler" class="">
+        <label id="example-radio-group-label">Choose time for game:</label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+            [(ngModel)]="choosenTime">
+            <mat-radio-button class="example-radio-button" *ngFor="let time of times" [value]="time">
+                {{time}} seconds
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>

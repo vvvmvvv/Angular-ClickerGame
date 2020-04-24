@@ -1,0 +1,21 @@
+<br />
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="centered"><strong>Welcome to my clicker game!</strong></h1>
+        <br />
+        <hr />
+        <div class="centered">
+            <h2>Enter your name: </h2><input [(ngModel)]="name" required class="name-input"><br />
+        </div>
+        <hr>
+        <div class="centered">
+            <button class="btn btn-info" *ngIf="name" routerLink="/game" (click)="setName()">Go to game menu!</button>
+            <br />
+            <br />
+        </div>
+
+        <footer class="centered">
+            <p>2020.&nbsp;Powered by Volodymyr Mikulin using Angular framework</p>
+        </footer>
+    </div>
+</div>
